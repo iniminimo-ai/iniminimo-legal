@@ -1,0 +1,17 @@
+{
+  "$comment": "Machine-readable pointer to the CURRENTLY REQUIRED version of each document. The backend reads this (from its own cached copy, never live at request time) and compares against the version each user accepted. Published version directories are IMMUTABLE — see README.",
+  "documents": {
+    "tos": {
+      "version": "2026-01-16",
+      "path": "legal/tos/2026-01-16/terms-of-service.md",
+      "effective_date": "2026-01-16",
+      "requires_reacceptance": true
+    },
+    "privacy": {
+      "version": "2026-01-16",
+      "path": "legal/privacy/2026-01-16/privacy-policy.md",
+      "effective_date": "2026-01-16",
+      "requires_reacceptance": true
+    }
+  }
+}
