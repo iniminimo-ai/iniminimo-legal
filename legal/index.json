@@ -1,5 +1,5 @@
 {
-  "$comment": "Machine-readable pointer to the CURRENT version of each published document. The backend reads this (from its own cached copy, never live at request time). For the documents the CONSENT GATE enforces \u2014 tos and privacy \u2014 it compares the version here against the version each user accepted. Other documents listed here are SERVED but not gated: they are shown to a parent and attested to, never accepted, and requires_reacceptance is meaningless for them. Published version directories are IMMUTABLE \u2014 see README. Version strings carry a document prefix on purpose: the accepted-version value is stored as a bare string on the user row, so identical values across documents would let a tos-vs-privacy comparison bug pass silently.",
+  "$comment": "Machine-readable pointer to the CURRENT version of each published document. The backend reads this (from its own cached copy, never live at request time). For the documents the CONSENT GATE enforces — tos and privacy — it compares the version here against the version each user accepted. Other documents listed here are SERVED but not gated: they are shown to a parent and attested to, never accepted, and requires_reacceptance is meaningless for them. Published version directories are IMMUTABLE — see README. Version strings carry a document prefix on purpose: the accepted-version value is stored as a bare string on the user row, so identical values across documents would let a tos-vs-privacy comparison bug pass silently.",
   "documents": {
     "tos": {
       "version": "tos-2026-01-16",
@@ -17,6 +17,12 @@
       "version": "childrens-notice-2026-08-27",
       "path": "legal/childrens-notice/2026-08-27/childrens-privacy-notice.md",
       "effective_date": "2026-08-27",
+      "requires_reacceptance": false
+    },
+    "dmca": {
+      "version": "dmca-2026-08-30",
+      "path": "legal/dmca/2026-08-30/copyright-and-takedown.md",
+      "effective_date": "2026-08-30",
       "requires_reacceptance": false
     }
   }
