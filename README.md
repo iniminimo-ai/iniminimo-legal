@@ -13,8 +13,27 @@ for "what exactly did this user accept, and when".
 legal/
   tos/<version>/terms-of-service.md
   privacy/<version>/privacy-policy.md
-  index.json                      <- the currently required version of each document
+  childrens-notice/<version>/childrens-privacy-notice.md
+  dmca/<version>/copyright-and-takedown.md
+  index.json                      <- the current version of each published document
 ```
+
+Not every document here is a document anyone accepts. `tos` and `privacy` are
+the two the consent gate enforces; `childrens-notice` and `dmca` are
+**published, not accepted** — served so they have a stable version string and a
+public home, never added to the acceptance flow. `index.json` lists all four;
+which ones are gated is decided in the backend, not here.
+
+🔴 **The DMCA designated-agent block is a federal artifact, not copy.** The
+name, postal address and email in `dmca/` must match the Copyright Office
+record for registration DMCA-1079191 character for character:
+`dmca@iniminimo.ai`, `INIMINIMO LLC, 5830 E 2nd St Ste 7000, Casper, WY 82609`,
+**with no `c/o` line**. 17 U.S.C. §512(c)(2) makes the agent's reachability the
+condition of the safe harbour, so an edit that merely tidies it — making the
+address consistent with the other contact addresses, or routing it to
+`privacy@` — breaks the protection the filing pays for. Counsel's own 2026-08-28
+draft made both of those edits; they were reverted deliberately. Change it only
+against the filing.
 
 ## Published versions are immutable
 
