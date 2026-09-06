@@ -90,6 +90,40 @@ issuing a new version**, not issuing one with the flag off.
 fails if a future change bumps a version and leaves the flag `false` — it is a
 review responsibility until an enforcing check exists.
 
+### 🔴 Before you bump a version: re-acceptance does not currently write an attestation
+
+**Read this at the moment you change a `version` field, because it has a fuse on
+it and nothing else will fire.**
+
+Two different records exist, written by two different paths:
+
+* **signup** writes a `consent_attestation` row — the propositions the parent
+  ticked, in the exact words shown, with a `copy_version` hash of that text. It
+  is written in the same database transaction as the account, so it cannot be
+  half-written.
+* **re-acceptance** (`POST /legal/accept`, the screen a version bump puts in
+  front of existing users) writes only the accepted version strings and a
+  timestamp on the user row. **No attestation row.** The backend's own module
+  docstring is explicit that these fields are *"not evidence that a parent read
+  anything"*.
+
+**Why that is tolerable as of 2026-09-06:** a real user's *first* acceptance
+goes through signup, which attests properly. The thin path only ever runs for
+people who already accepted a previous version.
+
+🔴 **The condition under which it stops being tolerable, which is the whole
+reason this paragraph exists:** the first document revision **after real users
+exist**. At that point, existing users re-accept revised terms through the path
+that records no attestation — and the 2026-09-02 Terms carry a credit-forfeiture
+clause on account deletion, exactly the kind of term where *"did they agree to
+this?"* gets asked and a version string is a thin answer.
+
+**So: before bumping a version for a user-facing document once the product has
+real users, check that re-acceptance writes an attestation.** If it still does
+not, that work comes first. Raised by Mark (CBO) and Nova (CTO), 2026-09-06,
+while publishing counsel's 2026-09-02 bundle; tracked in Notion as *"Re-accepting
+revised documents must write an attestation, not just version fields"*.
+
 ## How the app uses this
 
 The backend keeps **its own copy** of these documents and serves them from a
