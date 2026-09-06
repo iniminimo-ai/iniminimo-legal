@@ -124,6 +124,28 @@ not, that work comes first. Raised by Mark (CBO) and Nova (CTO), 2026-09-06,
 while publishing counsel's 2026-09-02 bundle; tracked in Notion as *"Re-accepting
 revised documents must write an attestation, not just version fields"*.
 
+### 🔴 And the same bump leaves child-data consent pointing at the old notice
+
+`consent_attestation` rows carry `childrens_notice_version`. A parent who
+created their child under an earlier notice — and does not create another child
+— keeps a child-data attestation naming the **superseded** notice, which is the
+document governing that child's data. Re-acceptance does not touch it: the
+consent gate covers the Terms and the Privacy Policy, and `childrens-notice` is
+published but not gated.
+
+**Do not fix this by updating those rows.** They are correct as they stand: a
+row records what a parent was shown at that moment, and rewriting it to name a
+newer notice replaces a true record with a convenient one — the same class of
+act as manufacturing an attestation. Two separate things are true at once: *the
+record is right, and the consent is stale.* The fix is therefore a **new**
+consent event against the new version, with the old row untouched and still
+queryable, so an audit can show what each parent saw and when, across versions.
+
+**When a revision to the Children's Notice is material enough to require
+re-consent is a human judgement with a name attached, and a version bump must
+not trigger it automatically.** Consent fatigue makes the prompt that matters
+look like the ones that did not. Mark (CBO), 2026-09-06.
+
 ## How the app uses this
 
 The backend keeps **its own copy** of these documents and serves them from a
