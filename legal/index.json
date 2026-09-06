@@ -1,29 +1,29 @@
 {
-  "$comment": "Machine-readable pointer to the CURRENT version of each published document. The backend reads this (from its own cached copy, never live at request time). For the documents the CONSENT GATE enforces — tos and privacy — it compares the version here against the version each user accepted. Other documents listed here are SERVED but not gated: they are shown to a parent and attested to, never accepted, and requires_reacceptance is meaningless for them. Published version directories are IMMUTABLE — see README. Version strings carry a document prefix on purpose: the accepted-version value is stored as a bare string on the user row, so identical values across documents would let a tos-vs-privacy comparison bug pass silently.",
+  "$comment": "Machine-readable pointer to the CURRENT version of each published document. The backend reads this (from its own cached copy, never live at request time). For the documents the CONSENT GATE enforces — tos and privacy — it compares the version here against the version each user accepted. Other documents listed here are SERVED but not gated: they are shown to a parent and attested to, never accepted, so requires_reacceptance has no runtime effect for them. Published version directories are IMMUTABLE — see README. Version strings carry a document prefix on purpose: the accepted-version value is stored as a bare string on the user row, so identical values across documents would let a tos-vs-privacy comparison bug pass silently. STANDING RULE (Ronen, 2026-09-06): when a document's version changes, requires_reacceptance is ALWAYS true — set it on every document in the same commit that changes the version, including the non-gated ones, so the field never has to be argued about per-change.",
   "documents": {
     "tos": {
-      "version": "tos-2026-01-16",
-      "path": "legal/tos/2026-01-16/terms-of-service.md",
-      "effective_date": "2026-01-16",
+      "version": "tos-2026-09-02",
+      "path": "legal/tos/2026-09-02/terms-of-service.md",
+      "effective_date": "2026-09-02",
       "requires_reacceptance": true
     },
     "privacy": {
-      "version": "privacy-2026-01-16",
-      "path": "legal/privacy/2026-01-16/privacy-policy.md",
-      "effective_date": "2026-01-16",
+      "version": "privacy-2026-09-02",
+      "path": "legal/privacy/2026-09-02/privacy-policy.md",
+      "effective_date": "2026-09-02",
       "requires_reacceptance": true
     },
     "childrens-notice": {
-      "version": "childrens-notice-2026-08-27",
-      "path": "legal/childrens-notice/2026-08-27/childrens-privacy-notice.md",
-      "effective_date": "2026-08-27",
-      "requires_reacceptance": false
+      "version": "childrens-notice-2026-09-02",
+      "path": "legal/childrens-notice/2026-09-02/childrens-privacy-notice.md",
+      "effective_date": "2026-09-02",
+      "requires_reacceptance": true
     },
     "dmca": {
-      "version": "dmca-2026-08-30",
-      "path": "legal/dmca/2026-08-30/copyright-and-takedown.md",
-      "effective_date": "2026-08-30",
-      "requires_reacceptance": false
+      "version": "dmca-2026-09-02",
+      "path": "legal/dmca/2026-09-02/copyright-and-takedown.md",
+      "effective_date": "2026-09-02",
+      "requires_reacceptance": true
     }
   }
 }
