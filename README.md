@@ -55,9 +55,9 @@ Dates rather than semver because that is what legal documents actually use
 and because "MAJOR = backwards-incompatible" has no meaning in prose.
 
 The version is a **deliberate human decision, never derived from a file hash or a
-commit**. Fixing a typo should not re-prompt every user in the app, so a
-non-material correction can ship as a new version with
-`requires_reacceptance: false` — or, more usually, not as a new version at all.
+commit**. Fixing a typo should not re-prompt every user in the app — so a
+non-material correction ships **not as a new version at all**. If it is worth a
+new version string, it is worth re-accepting: see the standing rule below.
 
 ## `index.json`
 
@@ -70,9 +70,25 @@ Per document:
 | `effective_date` | the date the version takes effect |
 | `requires_reacceptance` | whether users on an older version must accept again before continuing |
 
-`requires_reacceptance` is what separates a substantive change from a spelling
-fix. Set it to `false` only when the change genuinely does not alter what someone
-agreed to.
+### 🔴 Standing rule: a version change is ALWAYS a re-acceptance
+
+**Ronen, 2026-09-06: "requires_reacceptance needs to always be set to true if we
+change — need to be a hard rule that that is always true."**
+
+So `requires_reacceptance` is **not a per-change judgement call**. When a
+document's version changes, the flag is `true`, in the same commit, for **every**
+document whose version changed — including `childrens-notice` and `dmca`, where
+the flag has no runtime effect today because those documents are published but
+not gated. Setting it uniformly is the point: the field stops being something to
+argue about, and a document that later *becomes* gated does not inherit a stale
+`false`.
+
+The lever for "this change should not re-prompt anyone" is therefore **not
+issuing a new version**, not issuing one with the flag off.
+
+⚠️ **This rule is not machine-enforced.** This repository has no CI. Nothing
+fails if a future change bumps a version and leaves the flag `false` — it is a
+review responsibility until an enforcing check exists.
 
 ## How the app uses this
 
