@@ -2,7 +2,7 @@
 
 Last updated: September 2, 2026
 
-Iniminimo is a parent-facing service operated by Iniminimo LLC, a Wyoming limited liability company (“Iniminimo,” “we,” “us,” or “our”). Iniminimo lets adult parents and legal guardians create personalized animated music videos and related content for young children through our iOS and web app, including at app.preprod.iniminimo.ai.
+Iniminimo is a parent-facing service operated by Iniminimo LLC, a Wyoming limited liability company (“Iniminimo,” “we,” “us,” or “our”). Iniminimo lets adult parents and legal guardians create personalized animated music videos and related content for young children through our iOS and web app, including at app.iniminimo.ai.
 
 This Children’s Privacy Notice explains how we collect, use, disclose, and retain child-related information provided by adult parents and legal guardians through the Iniminimo mobile app, web app, websites, and related services. We refer to these collectively as the “Service.”
 
@@ -96,7 +96,7 @@ Please consider carefully before making child-related content public or sharing 
 
 ## 7. How Long We Keep Child-Related Information
 
-We retain child-related information for as long as reasonably necessary to provide the Service, maintain accounts, comply with legal obligations, respond to requests, enforce our Terms, prevent fraud and abuse, process accounting, tax, and chargeback matters, protect safety and security, resolve disputes, maintain records, and support legitimate business purposes. If a complaint, safety issue, privacy request, takedown request, IP complaint, legal claim, fraud issue, chargeback, or other dispute is open, deletion may be delayed, limited, or denied where retention is reasonably necessary until the issue is resolved. Relevant records may include prompts or descriptions, generated outputs, generated cartoon characters, logs, share records, vendor metadata, account or consent records, and payment or credit records where relevant, but not original uploaded child photos kept solely for future complaint handling.
+We retain child-related information for as long as reasonably necessary to provide the Service, maintain accounts, comply with legal obligations, respond to requests, enforce our Terms, prevent fraud and abuse, process accounting, tax, and chargeback matters, protect safety and security, resolve disputes, maintain records, and support legitimate business purposes. If a complaint, safety issue, privacy request, takedown request, IP complaint, legal claim, fraud issue, chargeback, or other dispute is open, deletion may be delayed or limited where retention is reasonably necessary until the issue is resolved. Relevant records may include prompts or descriptions, generated outputs, generated cartoon characters, logs, share records, vendor metadata, account or consent records, and payment or credit records where relevant, but not original uploaded child photos kept solely for future complaint handling.
 
 Our current practices include:
 

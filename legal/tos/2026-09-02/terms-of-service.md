@@ -2,7 +2,7 @@
 
 Last updated: September 2, 2026
 
-Welcome to Iniminimo. These Terms of Service (“Terms”) govern your access to and use of the Iniminimo iOS application, web application at app.preprod.iniminimo.ai, websites, content, features, and related services provided by Iniminimo LLC, a Wyoming limited liability company (“Iniminimo,” “we,” “us,” or “our”). We refer to these collectively as the “Service.”
+Welcome to Iniminimo. These Terms of Service (“Terms”) govern your access to and use of the Iniminimo iOS application, web application at app.iniminimo.ai, websites, content, features, and related services provided by Iniminimo LLC, a Wyoming limited liability company (“Iniminimo,” “we,” “us,” or “our”). We refer to these collectively as the “Service.”
 
 Please read these Terms carefully. By creating an account, clicking to accept these Terms, purchasing or using credits, uploading content, creating a child profile, generating a character or video, sharing content, or otherwise using the Service, you agree to be bound by these Terms.
 
