@@ -20,9 +20,9 @@
       "requires_reacceptance": true
     },
     "dmca": {
-      "version": "dmca-2026-09-02",
-      "path": "legal/dmca/2026-09-02/copyright-and-takedown.md",
-      "effective_date": "2026-09-02",
+      "version": "dmca-2026-09-15",
+      "path": "legal/dmca/2026-09-15/copyright-and-takedown.md",
+      "effective_date": "2026-09-15",
       "requires_reacceptance": true
     }
   }
