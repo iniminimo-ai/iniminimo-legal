@@ -1,6 +1,6 @@
 # Children’s Privacy Notice
 
-Last updated: September 2, 2026
+Last updated: October 13, 2026
 
 Iniminimo is a parent-facing service operated by Iniminimo LLC, a Wyoming limited liability company (“Iniminimo,” “we,” “us,” or “our”). Iniminimo lets adult parents and legal guardians create personalized animated music videos and related content for young children through our iOS and web app, including at app.iniminimo.ai.
 
@@ -73,7 +73,7 @@ Current provider categories include:
 |---|---|---|
 | Hosting, storage, logging, and backups | Hosting and cloud infrastructure providers | Product data, generated content, logs, and backups in the United States. |
 | Character generation | Google Gemini | Uploaded child photo once, plus limited descriptors such as age, gender, and appearance details. |
-| Video animation | Video animation provider | Generated character image and animation prompts, not the original uploaded child photo. This provider may process data outside the United States, including in China. |
+| Video animation | Video animation provider | Generated character image, animation prompts, and generated narration audio, which may speak the child’s first name. Not the original uploaded child photo. This provider may process data outside the United States, including in China. |
 | Music generation | Music generation provider | Lyrics and style information, which may include the child’s first name. |
 | Voice, audio, and text-to-speech | Voice/audio provider | Spoken text, text-to-speech inputs, generated audio, audio alignment data, and name-pronunciation information, which may include the child’s first name as needed. |
 | Content-screening AI | Content-screening AI provider | Parent-written descriptions and prompts submitted for safety or content screening before generation. |

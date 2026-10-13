@@ -8,15 +8,15 @@
       "requires_reacceptance": true
     },
     "privacy": {
-      "version": "privacy-2026-09-02",
-      "path": "legal/privacy/2026-09-02/privacy-policy.md",
-      "effective_date": "2026-09-02",
+      "version": "privacy-2026-10-13",
+      "path": "legal/privacy/2026-10-13/privacy-policy.md",
+      "effective_date": "2026-10-13",
       "requires_reacceptance": true
     },
     "childrens-notice": {
-      "version": "childrens-notice-2026-09-02",
-      "path": "legal/childrens-notice/2026-09-02/childrens-privacy-notice.md",
-      "effective_date": "2026-09-02",
+      "version": "childrens-notice-2026-10-13",
+      "path": "legal/childrens-notice/2026-10-13/childrens-privacy-notice.md",
+      "effective_date": "2026-10-13",
       "requires_reacceptance": true
     },
     "dmca": {

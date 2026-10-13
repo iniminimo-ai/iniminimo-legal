@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: September 2, 2026
+Last updated: October 13, 2026
 
 Iniminimo LLC, a Wyoming limited liability company (“Iniminimo,” “we,” “us,” or “our”) provides a parent-facing service that allows adult parents and legal guardians to create personalized animated music videos and related content for toddlers and other young children.
 
@@ -128,7 +128,7 @@ After the stylized character is generated, Iniminimo deletes the original upload
 
 Generated character images, prompts, lyrics, audio, text, the child’s first name, and related outputs may be processed by other providers to generate the requested content and screen parent-written inputs for safety. Downstream AI providers do not receive the original uploaded child photo. For example:
 
-1. video animation providers may receive the generated character image and animation prompts;
+1. video animation providers may receive the generated character image, animation prompts, and generated narration audio, which may include the child’s first name spoken aloud;
 2. music generation providers may receive lyrics and style information, which may include the child’s first name;
 3. voice/audio providers may receive spoken text, generated audio, and the child’s first name as needed for voice, text-to-speech, audio alignment, and name pronunciation; and
 4. content-screening AI providers may receive parent-written descriptions or prompts before generation for safety and content screening.
@@ -145,7 +145,7 @@ Current provider categories include:
 |---|---|---|
 | Hosting, storage, logging, and backups | Hosting the Service, storing content, maintaining logs, backups, and infrastructure. | Account, content, log, backup, device, usage, and technical information. Production environment currently in the United States. |
 | Character generation | Generating a stylized or cartoon character from the uploaded photo and limited descriptors. | Uploaded child photo and limited descriptors such as age, gender, hair, or appearance descriptors. The original uploaded child photo is sent only for this character-generation step and is deleted by Iniminimo after generation as described above. |
-| Video animation | Animating videos using generated character images and animation prompts. | Generated character image and animation prompts, but not the original uploaded child photo. Video animation processing may occur in China. |
+| Video animation | Animating videos using generated character images and animation prompts. | Generated character image, animation prompts, and generated narration audio, which may include the child’s first name spoken aloud, but not the original uploaded child photo. Video animation processing may occur in China. |
 | Music generation | Generating songs from lyrics and style information. | Lyrics and style information, which may include the child’s first name. Processing locations may depend on the music generation provider used. |
 | Voice, text-to-speech, audio alignment, and pronunciation | Generating voice or spoken audio and supporting audio alignment or name pronunciation. | Spoken text, generated audio, and the child’s first name as needed for voice, text-to-speech, audio alignment, and name pronunciation. Processing locations may depend on the voice/audio provider used. |
 | Content-screening AI | Screening parent-written descriptions or prompts for safety and content compliance before generation. | Parent-written descriptions or prompts submitted for safety or content screening before generation. |
