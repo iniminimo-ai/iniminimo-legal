@@ -1,6 +1,6 @@
-# IniMinimo — legal documents
+# Iniminimo — legal documents
 
-The published Terms of Service and Privacy Policy for the IniMinimo app, and the
+The published Terms of Service and Privacy Policy for the Iniminimo app, and the
 source of truth for **which version a user is asked to accept**.
 
 This repository is public on purpose: the documents people agree to should be
