@@ -90,6 +90,62 @@ issuing a new version**, not issuing one with the flag off.
 fails if a future change bumps a version and leaves the flag `false` — it is a
 review responsibility until an enforcing check exists.
 
+### 🔴 Before you bump a version: re-acceptance does not currently write an attestation
+
+**Read this at the moment you change a `version` field, because it has a fuse on
+it and nothing else will fire.**
+
+Two different records exist, written by two different paths:
+
+* **signup** writes a `consent_attestation` row — the propositions the parent
+  ticked, in the exact words shown, with a `copy_version` hash of that text. It
+  is written in the same database transaction as the account, so it cannot be
+  half-written.
+* **re-acceptance** (`POST /legal/accept`, the screen a version bump puts in
+  front of existing users) writes only the accepted version strings and a
+  timestamp on the user row. **No attestation row.** The backend's own module
+  docstring is explicit that these fields are *"not evidence that a parent read
+  anything"*.
+
+**Why that is tolerable as of 2026-09-06:** a real user's *first* acceptance
+goes through signup, which attests properly. The thin path only ever runs for
+people who already accepted a previous version.
+
+🔴 **The condition under which it stops being tolerable, which is the whole
+reason this paragraph exists:** the first document revision **after real users
+exist**. At that point, existing users re-accept revised terms through the path
+that records no attestation — and the 2026-09-02 Terms carry a credit-forfeiture
+clause on account deletion, exactly the kind of term where *"did they agree to
+this?"* gets asked and a version string is a thin answer.
+
+**So: before bumping a version for a user-facing document once the product has
+real users, check that re-acceptance writes an attestation.** If it still does
+not, that work comes first. Raised by Mark (CBO) and Nova (CTO), 2026-09-06,
+while publishing counsel's 2026-09-02 bundle; tracked in Notion as *"Re-accepting
+revised documents must write an attestation, not just version fields"*.
+
+### 🔴 And the same bump leaves child-data consent pointing at the old notice
+
+`consent_attestation` rows carry `childrens_notice_version`. A parent who
+created their child under an earlier notice — and does not create another child
+— keeps a child-data attestation naming the **superseded** notice, which is the
+document governing that child's data. Re-acceptance does not touch it: the
+consent gate covers the Terms and the Privacy Policy, and `childrens-notice` is
+published but not gated.
+
+**Do not fix this by updating those rows.** They are correct as they stand: a
+row records what a parent was shown at that moment, and rewriting it to name a
+newer notice replaces a true record with a convenient one — the same class of
+act as manufacturing an attestation. Two separate things are true at once: *the
+record is right, and the consent is stale.* The fix is therefore a **new**
+consent event against the new version, with the old row untouched and still
+queryable, so an audit can show what each parent saw and when, across versions.
+
+**When a revision to the Children's Notice is material enough to require
+re-consent is a human judgement with a name attached, and a version bump must
+not trigger it automatically.** Consent fatigue makes the prompt that matters
+look like the ones that did not. Mark (CBO), 2026-09-06.
+
 ## How the app uses this
 
 The backend keeps **its own copy** of these documents and serves them from a
