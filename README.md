@@ -27,7 +27,7 @@ which ones are gated is decided in the backend, not here.
 🔴 **The DMCA designated-agent block is a federal artifact, not copy.** The
 name, postal address and email in `dmca/` must match the Copyright Office
 record for registration DMCA-1079191 character for character:
-`dmca@iniminimo.ai`, `INIMINIMO LLC, 5830 E 2nd St Ste 7000, Casper, WY 82609`,
+`dmca@iniminimoments.com` (amended by Ronen 2026-10-20; was `dmca@iniminimo.ai`), `INIMINIMO LLC, 5830 E 2nd St Ste 7000, Casper, WY 82609`,
 **with no `c/o` line**. 17 U.S.C. §512(c)(2) makes the agent's reachability the
 condition of the safe harbour, so an edit that merely tidies it — making the
 address consistent with the other contact addresses, or routing it to
